@@ -1,5 +1,6 @@
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 function App() {
   let items = [
@@ -15,11 +16,18 @@ function App() {
     console.log(item);
   };
 
+  const handlePress = () => {
+    console.log("Button pressed!");
+  };
+
   return (
     <div>
       <Alert>
         Hello World!
       </Alert>
+      <Button colour="danger" onPress={handlePress}>
+        Danger
+      </Button>
       <ListGroup
         items={items}
         heading="Cities"
